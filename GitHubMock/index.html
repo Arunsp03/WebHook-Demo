@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form id="formdata">
+        <label for="webhook_url">Webhook Url</label>
+        <input name="webhook_url" id="webhook_url" type="text"/>
+        <label for="secret">Secret</label>
+        <input name="secret" id="secret"/>
+        <p>Trigger Webhook events for</p>
+        <input class="events" id="commit" type="checkbox" name="Commit"/>
+        <input class="events" id="push" type="checkbox" name="Push"/>
+        <input class="events" id="merge" type="checkbox" name="Merge"/>
+        <button type="button" onclick="submitform()">Register Webhook</button>
+        </form>   
+        <div>
+            Emulate events
+            <button onclick="handleMock('Commit')" type="button">commit</button>
+            <button onclick="handleMock('Push')" type="button">push</button>
+            <button onclick="handleMock('Merge')" type="button">merge</button>
+        </div> 
+    </div>
+    <script src="./dist/index.js"></script>
+</body>
+</html>
